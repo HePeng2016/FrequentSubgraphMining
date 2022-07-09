@@ -126,17 +126,20 @@ GraphDataSet1 GraphDataSet2 .. are the input file. The intersection graphs of Gr
 # The demo commands. 
 To obtain the count of graphs. 
      
-    ./GraphGen  COUNT  C_340 
+      ./GraphGen  COUNT  C_340 
     
 To obtain the node count and edge count for each graph in graphs.
      
-     ./GraphGen  SUMMARY  C_340 > log 
+      ./GraphGen  SUMMARY  C_340 > log 
      
      
-To the frequent graphs at the frequency threshold 0.5. The frequent graphs are stored in file FrequentGraphDataSet.
+To obtain the frequent graphs at the frequency threshold 0.5. The frequent graphs are stored in file FrequentGraphDataSet.
      
-     ./GraphGen  C_340    0.5  FrequentGraphDataSet
+      ./GraphGen  C_340    0.5  FrequentGraphDataSet
      
+To obtain the frequent graphs at the frequency threshold 0.5 with both Case 1 and Case 2 prune methods.  
+ 
+      ./GraphGen  C_340    0.5  FrequentGraphDataSet   -T
 
 To obtain graphs that match results. C_340 is the file for supergraphs, FrequentGraphDataSet is the subgraphs file, and the matched results are stored in file 'output'. 
 
