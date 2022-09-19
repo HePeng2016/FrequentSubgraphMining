@@ -365,31 +365,29 @@ int main( int argc, char **argv)
                     g.isTrace = true;
 
                     if(g.graphBulkMatch(Sub_g.Sample[i]))
-                   {    
-                    
-                       for(int j=0;j<g.MatchedGraphsIDArray.size();j++)
-                      {
+                   { 
+			for(int j1=0;j1<g.TraceArray[j].size();j1++)
+                       {
+                            std::vector<unsigned int> Index; 
+                            Index.resize(g.TraceArray[j][j1].size());
 
-                        for(int j1=0;j1<g.TraceArray[j].size();j1++)
-                        {
-                            for(int j2=0;j2<g.TraceArray[j][j1].size();j2++)
+                            for(int i=0;i<g.TraceSingle[0].size();i++)
                             {
+                                Index[g.TraceSingle[0][i]] = i;
+                            }
+
+                           assert(g.TraceSingle[0].size()==g.TraceArray[j][j1].size());
+
+                           for(int j2=0;j2<g.TraceArray[j][j1].size();j2++)
+                           {
                                 fprintf(output3,"%d   ",i);
                                 fprintf(output3,"%d   ",g.MatchedGraphsIDArray[j]);
                                 fprintf(output3,"%d   ",j1);
-                                fprintf(output3,"%d\n",g.TraceArray[j][j1][j2]); 
-
+                                fprintf(output3,"%d\n",g.TraceArray[j][j1][Index[j2]]); 
                             }
-
-                        }
-
-                      }
-             
-                  }
-                  
+                       }
+                  }    
              }
-
-
         }
         else{
              for(int i=0;i<Sub_g.Sample.size();i++)
