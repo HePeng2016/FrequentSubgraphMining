@@ -149,6 +149,7 @@ The matched results are stored as verbose format.
 
     ./GraphGen  MATCH  C_340  FrequentGraphDataSet  output -Verbose
 
-
+# Cite this as
+   He,Peng et al. "CFGM: An algorithm for closed frequent graph patterns mining." Information Sciences (2023). https://doi.org/10.1016/j.ins.2022.12.089
 
 
