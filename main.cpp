@@ -62,7 +62,7 @@ int main( int argc, char **argv)
 
      if(argc<3)
      {
-        printf("./GraphGen  GraphSet Frequency FrequentGraphDataSet [-d  FrequentGraphDataSetIndex]  [ -group SelectedIndex]\n");
+        printf("./GraphGen  GraphSet Frequency FrequentGraphDataSet [-d  FrequentGraphDataSetIndex]  [ -group SelectedIndex] [-T] \n");
         printf("./GraphGen  INTERSECT GraphDataSet1   GraphDataSet2  ..  -o output \n");
         printf("./GraphGen  EXCLUDE GraphDataSet1  GraphDataSet1 -o output  \n");
         printf("./GraphGen  COUNT GraphDataSet \n");
