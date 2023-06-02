@@ -381,9 +381,9 @@ int main( int argc, char **argv)
                            assert(g.TraceSingle[0].size()==g.TraceArray[j][j1].size());
                            for(int j2=0;j2<g.TraceArray[j][j1].size();j2++)
                            {
-                               fprintf(output3,"%d   ",i);
-                               fprintf(output3,"%d   ",g.MatchedGraphsIDArray[j]);
-                               fprintf(output3,"%d   ",j1);
+                               fprintf(output3,"%d\t",i);
+                               fprintf(output3,"%d\t",g.MatchedGraphsIDArray[j]);
+                               fprintf(output3,"%d\t",j1);
                                fprintf(output3,"%d\n",g.TraceArray[j][j1][Index[j2]]);
                            }
                         }
@@ -399,8 +399,8 @@ int main( int argc, char **argv)
                     
                        for(int j=0;j<g.MatchedGraphsIDArray.size();j++)
                       {
-                         fprintf(output3,"%d   ",i);
-                         fprintf(output3,"%d   ",g.MatchedGraphsIDArray[j]);
+                         fprintf(output3,"%d\t",i);
+                         fprintf(output3,"%d\t",g.MatchedGraphsIDArray[j]);
                          fprintf(output3,"%lf\n",(g.MatchedGraphsIDCountArray[j]*1.0)/g.MatchedSingleGraphCount);
                       }
              
@@ -535,8 +535,8 @@ if(Map.size()!=0)
            {
                for(int j=0;j<g.MatchedGraphsIDArray.size();j++)
                {
-                    fprintf(output2,"%d   ",i);
-                    fprintf(output2,"%d   ",g.MatchedGraphsIDArray[j]);
+                    fprintf(output2,"%d\t",i);
+                    fprintf(output2,"%d\t",g.MatchedGraphsIDArray[j]);
                     fprintf(output2,"%lf\n",(g.MatchedGraphsIDCountArray[j]*1.0)/g.MatchedSingleGraphCount);
                }
 
@@ -583,8 +583,8 @@ if(Map.size()!=0)
                     
                for(int j=0;j<g.MatchedGraphsIDArray.size();j++)
                {
-                  fprintf(output2,"%d   ",index);
-                  fprintf(output2,"%d   ",g.MatchedGraphsIDArray[j]);
+                  fprintf(output2,"%d\t",index);
+                  fprintf(output2,"%d\t",g.MatchedGraphsIDArray[j]);
                   fprintf(output2,"%lf\n",(g.MatchedGraphsIDCountArray[j]*1.0)/g.MatchedSingleGraphCount);
                }
           }
@@ -709,7 +709,7 @@ return 0;
 
 
 
-     printf("TestSuccessful\n");
+    // printf("TestSuccessful\n");
 
      fclose(output1);
 
