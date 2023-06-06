@@ -119,9 +119,9 @@ GraphDataSet is the input file, this command will return the number of graphs in
 
 GraphDataSet is the input file, this command will return the array with two columns, one column shows the number of nodes for each graph and another column shows the number of edges for each graph.
 
-      ./GraphGen  INTERSECT GraphDataSet1   GraphDataSet2  ..  -o output 
+      ./GraphGen  UNION GraphDataSet1   GraphDataSet2  ..  -o output 
       
-GraphDataSet1 GraphDataSet2 .. are the input file. The intersection graphs of GraphDataSet1   GraphDataSet2  .. with removing duplicates will be stored in the file output.  
+GraphDataSet1 GraphDataSet2 .. are the input file. The union graphs of GraphDataSet1   GraphDataSet2  .. with removing duplicates will be stored in the file output.  
  
 # The demo commands. 
 To obtain the count of graphs. 
