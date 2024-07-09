@@ -84,7 +84,7 @@ For example:
       0   5   3
       0   6   3
      
-The first line indicate the 0'th subgraph matched the 3'th supergraph, and the 0'th subgraph appears three times in the 3'th supergraph. 
+The first line indicate the 0'th subgraph matched the 3'th supergraph, and the 0'th subgraph appears four times in the 3'th supergraph. 
 
 If -Verbose is selected there are more detail information appears in the output file. The format of output file is as follow: 
 
