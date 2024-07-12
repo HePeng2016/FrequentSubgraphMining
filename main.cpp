@@ -180,7 +180,7 @@ int main( int argc, char **argv)
                    {
                       if( H.MPfind(g.Sample[i_])==MAX_UINT_CONSTANT)
                       {
-                          g.OutPutGraph(H.GraphSet[i_],output3);
+                          g.OutPutGraph(g.Sample[i_],output3);
                       }
                    }
 
