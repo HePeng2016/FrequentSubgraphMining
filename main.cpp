@@ -322,7 +322,7 @@ int main( int argc, char **argv)
        if( strcmp(argv[i],"SYMMETRY")==0)
        {
 	    FILE * input1 =  fopen(argv[i+1],"r");
-            FILE * input2 =  fopen(argv[i+2],"w+");
+            FILE * output =  fopen(argv[i+2],"w+");
 	    if(input1!=NULL)
             {
                 g.GraphReadRemoveDuplicatedEdge(input1);
@@ -344,9 +344,9 @@ int main( int argc, char **argv)
                         assert(g.TraceG1[0].size()==g.TraceG2[j1].size());
                         for(int j2=0;j2<g.TraceG2[j1].size();j2++)
                         {
-			       fprintf(output3,"%d\t",i);
-                               fprintf(output3,"%d\t",j1);
-                               fprintf(output3,"%d\n",g.TraceG2[j1][Index[j2]]);
+			       fprintf(output,"%d\t",i);
+                               fprintf(output,"%d\t",j1);
+                               fprintf(output,"%d\n",g.TraceG2[j1][Index[j2]]);
                         }
 		      }
 
