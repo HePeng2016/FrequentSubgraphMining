@@ -319,9 +319,41 @@ int main( int argc, char **argv)
           g.Trim = true;
        }
 
+       if( strcmp(argv[i],"SYMMETRY")==0)
+       {
+	    FILE * input1 =  fopen(argv[i+1],"r");
+            FILE * input2 =  fopen(argv[i+2],"w+");
+	    if(input1!=NULL)
+            {
+                g.GraphReadRemoveDuplicatedEdge(input1);
+            }
+	    g.isTrace = true; 
+	    for(int i=0;i<g.Sample.size();i++)
+            {
+		g.graphMatch(g.Sample[i],g.Sample[i]); 
+	
+                        std::vector<unsigned int> Index; 
+                        Index.resize(g.TraceG1[0].size());
 
+                        for(int i=0;i<g.TraceG1[0].size();i++)
+                        {
+                            Index[g.TraceG1[0][i]] = i;
+                        }
+		       for(int j1 =0; j1 < g.TraceG2.size();j1++)
+		      {
+                        assert(g.TraceG1[0].size()==g.TraceG2[j1].size());
+                        for(int j2=0;j2<g.TraceG2[j1].size();j2++)
+                        {
+			       fprintf(output3,"%d\t",i);
+                               fprintf(output3,"%d\t",j1);
+                               fprintf(output3,"%d\n",g.TraceG2[j1][Index[j2]]);
+                        }
+		      }
 
+            }
+	    g.isTrace = false; 
 
+       } 
 
         if( strcmp(argv[i],"MATCH")==0)
         {
