@@ -352,7 +352,10 @@ int main( int argc, char **argv)
 
             }
 	    g.isTrace = false; 
-
+	       
+            fclose(input1);
+            fclose(output);
+	    
        } 
 
         if( strcmp(argv[i],"MATCH")==0)
