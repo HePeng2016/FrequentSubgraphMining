@@ -69,6 +69,7 @@ int main( int argc, char **argv)
         printf("./GraphGen  SUMMARY GraphDataSet \n");
         printf("./GraphGen  MATCH GraphDataSet  MatchGraphFile output [-Verbose]\n");
         printf("./GraphGen  SELECT  GraphSet [-N] FrequentGraphDataSetIndex output\n");
+	printf("./GraphGen  SYMMETRY  GraphDataSet output\n"); 
 
         return 0;
      }
