@@ -356,6 +356,7 @@ int main( int argc, char **argv)
 	       
             fclose(input1);
             fclose(output);
+	    return 0; 
 	    
        } 
 
