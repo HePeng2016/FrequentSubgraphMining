@@ -39,6 +39,7 @@ Indicated the two edges graph: 7-(8)-5-(9)-1
       
 
 Frequency is the support percentage and its the value range from [0,1). This means that the frequent graph should appear at least the percentage of whole population. 
+Note: CFGM uses an exclusive minimum support rule. A pattern is frequent only when `support > int(Frequency * |D|)`, not `support >= int(Frequency * |D|)`.
 
 FrequentGraphDataSet : is the name of output file recorded frequent subgraphs using graph topology storage format. 
 
