@@ -4,13 +4,12 @@
  *
  * Closed Frequent Graph Mining (CFGM)
  *
- * Major responsibilities:
- *   - Read graph database
- *   - Mine closed frequent subgraphs
- *   - Perform graph/subgraph isomorphism matching
- *   - Compute minimum DFS codes (canonical form)
- *   - Detect and prune equivalent extensions
- *   - Support GFLE (General Forward Leaf Edge) pruning
+ * Core algorithms:
+ *   - DFS-code based graph enumeration
+ *   - Canonical minimum DFS-code checking
+ *   - Projected database growth
+ *   - Support counting
+ *   - Subgraph isomorphism matching
  *
  * Graph representation
  *
