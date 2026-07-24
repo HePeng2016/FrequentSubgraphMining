@@ -1,3 +1,49 @@
+
+/******************************************************************************
+ * ComStruct
+ *
+ * Closed Frequent Graph Mining (CFGM)
+ *
+ * Major responsibilities:
+ *   - Read graph database
+ *   - Mine closed frequent subgraphs
+ *   - Perform graph/subgraph isomorphism matching
+ *   - Compute minimum DFS codes (canonical form)
+ *   - Detect and prune equivalent extensions
+ *   - Support GFLE (General Forward Leaf Edge) pruning
+ *
+ * Graph representation
+ *
+ *   Graph_
+ *     └─ vertex_List[]
+ *          └─ edge_list[]
+ *
+ * Mining representation
+ *
+ *   DFS
+ *     One DFS-code edge in the currently explored pattern.
+ *
+ *   PDFS
+ *     One occurrence (embedding) of the current pattern inside a
+ *     transaction graph.
+ *
+ *   DFSPath_T
+ *     Stack representing the current DFS code during mining.
+ *
+ * Important concepts
+ *
+ *   Right-most path
+ *     Used for legal forward/backward extensions.
+ *
+ *   Minimum DFS code
+ *     Canonical representation used to avoid generating
+ *     isomorphic patterns multiple times.
+ *
+ *   GFLE
+ *     General Forward Leaf Edge optimization.
+ *
+ ******************************************************************************/
+
 #include <iterator>
 #include <iostream>
 #include <stdlib.h>
@@ -66,6 +112,19 @@ typedef struct Graph_ {
     std::vector<Vertex> vertex_List; 
     unsigned int EdgeSize;
 }Graph_;
+
+/*
+ * Projected DFS occurrence.
+ *
+ * Represents one embedding of the current DFS pattern inside a
+ * database graph.
+ *
+ * ID       : transaction graph ID
+ * StartID  : source vertex in transaction graph
+ * EndID    : destination vertex in transaction graph
+ * parentID : corresponding occurrence in parent pattern
+ */
+
 
  typedef struct PDFS {
     unsigned int ID;    // The ID of the original input graphs 
