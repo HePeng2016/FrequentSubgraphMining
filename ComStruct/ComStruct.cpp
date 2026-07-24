@@ -1,3 +1,26 @@
+/******************************************************************************
+ * FrequentGraphMining / Graph Matching Implementation
+ *
+ * This file contains the implementation of the DFS-code based
+ * frequent subgraph mining engine, graph containment checking,
+ * canonical DFS-code verification, and subgraph isomorphism
+ * matching routines used by ComStruct.
+ *
+ * Key algorithms implemented here:
+ *   - FrequentGraphMining()
+ *   - graphMatch()
+ *   - graphBulkMatch()
+ *   - Is_minimum()
+ *
+ * Pruning techniques:
+ *   - Minimum support filtering
+ *   - Canonical DFS-code pruning
+ *   - General Forward Leaf Edge (GFLE) pruning
+ *   - Transitive occurrence pruning
+ ******************************************************************************/
+
+
+
 #include "ComStruct.h"
 
 bool  ComparerootID(rootComposeID A,rootComposeID B)
